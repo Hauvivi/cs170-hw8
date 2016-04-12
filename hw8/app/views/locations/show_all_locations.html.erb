@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <th>Location</th>
+    </tr>
+    
+    <% @locations.each do |location| %>
+        <tr>
+            <td><%= location.name %></td>
+            <td><%= link_to 'show', show_location_path(location) %></td>
+            <td><%= link_to 'edit', edit_location_path(location) %></td>
+            <td><%= link_to 'delete', delete_location_path(location), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        </tr>
+    <% end %>
+</table>
+
+<p><%= link_to 'Create New Location', new_location_path %></p>

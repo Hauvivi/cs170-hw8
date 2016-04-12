@@ -1,0 +1,5 @@
+event1:
+    name: 'Event 1'
+    description: 'This is a event 1.'
+    start_date: <%= Date.today %>
+    end_date: <%= Date.today + 14 %>

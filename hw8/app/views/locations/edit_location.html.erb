@@ -1,0 +1,12 @@
+<%= form_for @location, url: update_location_path, method: 'post' do |f| %>
+    <%= f.label :name, 'Name' %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :description, 'Description' %>
+    <%= f.text_field :description %>
+    <br>
+    <%= f.label :coordinates, 'Coordinates' %>
+    <%= f.text_field :coordinates %>
+    <br>
+    <%= f.submit 'Submit' %>
+<% end%>

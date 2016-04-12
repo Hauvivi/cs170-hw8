@@ -1,0 +1,4 @@
+user1:
+    first_name: 'User'
+    last_name: '1'
+    email: 'user1@email.com'

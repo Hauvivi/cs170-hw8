@@ -1,0 +1,36 @@
+<h2><%= @event.name %></h2>
+<p><%= @event.description %></p>
+<p><b>start: </b><%= @event.start_date %></p>
+<p><b>end: </b></b><%= @event.end_date %></p>
+
+<h3>Locations</h3>
+
+<table>
+    <tr>
+        <th>Location</th>
+        <th>Description</th>
+    </tr>
+    
+    <% @event.locations.each do |loc| %>
+        <tr>
+            <td><%= loc.name %></td>
+            <td><%= loc.description %></td>
+        </tr>
+    <% end %>
+</table>
+
+<h3>Participants</h3>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    
+    <% @event.participants.each do |u| %>
+        <tr>
+            <td><%= "#{u.first_name} #{u.last_name}" %></td>
+            <td><%= u.email %></td>
+        </tr>
+    <% end %>
+</table>
